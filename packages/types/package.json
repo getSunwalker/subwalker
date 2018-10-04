@@ -1,11 +1,12 @@
 {
-    "name": "@sunwalker/xml-to-json",
+    "name": "@sunwalker/types",
     "version": "0.0.1",
-    "description": "xml to json",
+    "description": "> TODO: description",
     "author": "imingyu <mingyuhisoft@163.com>",
     "homepage": "https://github.com/getSunwalker/sunwalker#readme",
     "license": "BSD-3-Clause",
     "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "publishConfig": {
         "registry": "https://registry.npm.taobao.org"
     },
@@ -19,13 +20,5 @@
     },
     "bugs": {
         "url": "https://github.com/getSunwalker/sunwalker/issues"
-    },
-    "dependencies": {
-        "@sunwalker/types": "^0.0.1",
-        "@sunwalker/utils": "^0.0.1",
-        "parse5": "^5.1.0"
-    },
-    "devDependencies": {
-        "@types/parse5": "^5.0.0"
     }
 }

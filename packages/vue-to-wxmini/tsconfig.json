@@ -12,7 +12,7 @@
             "path": "../utils"
         },
         {
-            "path": "../types"
+            "path": "../xml-to-json"
         }
     ]
 }

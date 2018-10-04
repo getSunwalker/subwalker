@@ -1,7 +1,7 @@
 {
-    "name": "@sunwalker/xml-to-json",
+    "name": "@sunwalker/vue-to-wxmini",
     "version": "0.0.1",
-    "description": "xml to json",
+    "description": "> TODO: description",
     "author": "imingyu <mingyuhisoft@163.com>",
     "homepage": "https://github.com/getSunwalker/sunwalker#readme",
     "license": "BSD-3-Clause",
@@ -21,11 +21,7 @@
         "url": "https://github.com/getSunwalker/sunwalker/issues"
     },
     "dependencies": {
-        "@sunwalker/types": "^0.0.1",
         "@sunwalker/utils": "^0.0.1",
-        "parse5": "^5.1.0"
-    },
-    "devDependencies": {
-        "@types/parse5": "^5.0.0"
+        "@sunwalker/xml-to-json": "^0.0.1"
     }
 }
