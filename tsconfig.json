@@ -3,10 +3,15 @@
         "types": ["node"],
         "lib": ["es5", "es6", "es7", "dom"],
         "target": "es5",
-        "baseUrl": "packages",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "baseUrl": "./packages",
         "paths": {
-            "@subwalker/*": ["*/src"]
-        }
+            "@sunwalker/*": ["./*/src"]
+        },
+        "strict": true,
+        "sourceMap": true,
+        "declaration": true
     },
     "exclude": ["node_modules", "**/*.spec.ts"]
 }

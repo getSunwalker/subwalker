@@ -7,7 +7,9 @@
             "options": [120]
         },
         "triple-equals": true,
-        "semicolon": true
+        "semicolon": true,
+        "indent": [true, "spaces", 4],
+        "quotemark": [true, "single"]
     },
     "rulesDirectory": []
 }

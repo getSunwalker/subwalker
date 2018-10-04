@@ -2,5 +2,8 @@
     "editor.tabSize": 4,
     "prettier.eslintIntegration": true,
     "editor.wordWrap": "on",
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "prettier.tabWidth": 4,
+    "prettier.tslintIntegration": true,
+    "typescript.tsdk": "node_modules/typescript/lib"
 }
