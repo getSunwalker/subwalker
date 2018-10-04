@@ -1,0 +1,6 @@
+{
+    "editor.tabSize": 4,
+    "prettier.eslintIntegration": true,
+    "editor.wordWrap": "on",
+    "git.ignoreLimitWarning": true
+}

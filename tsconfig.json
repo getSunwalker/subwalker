@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "types": ["node"],
+        "lib": ["es5", "es6", "es7", "dom"],
+        "target": "es5",
+        "baseUrl": "packages",
+        "paths": {
+            "@subwalker/*": ["*/src"]
+        }
+    },
+    "exclude": ["node_modules", "**/*.spec.ts"]
+}

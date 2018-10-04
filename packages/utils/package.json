@@ -1,0 +1,21 @@
+{
+    "name": "@sunwalker/utils",
+    "version": "0.0.1",
+    "description": "> TODO: description",
+    "author": "imingyu <mingyuhisoft@163.com>",
+    "homepage": "https://github.com/getSunwalker/subwalker#readme",
+    "license": "BSD-3-Clause",
+    "publishConfig": {
+        "registry": "https://registry.npm.taobao.org"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/getSunwalker/subwalker.git"
+    },
+    "scripts": {
+        "build": "tsc"
+    },
+    "bugs": {
+        "url": "https://github.com/getSunwalker/subwalker/issues"
+    }
+}
