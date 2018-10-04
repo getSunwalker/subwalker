@@ -4,6 +4,7 @@
     "compilerOptions": {
         "baseUrl": ".",
         "outDir": ".",
-        "rootDir": "src"
+        "rootDir": "src",
+        "composite": true
     }
 }

@@ -93,7 +93,7 @@ const convert = (parseResult: DocumentFragment | any): IXmlJsonElement => {
     }
     if (childNodes && childNodes.length > 0) {
         const children: IXmlJsonElement[] = [];
-        each(childNodes, (item) => {
+        each<DefaultTreeNode>(childNodes, (item) => {
             children.push(convert(item));
         });
         res.children = children;
