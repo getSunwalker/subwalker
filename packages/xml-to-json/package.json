@@ -26,6 +26,7 @@
         "parse5": "^5.1.0"
     },
     "devDependencies": {
+        "@types/html-minifier": "^3.5.2",
         "@types/parse5": "^5.0.0"
     }
 }

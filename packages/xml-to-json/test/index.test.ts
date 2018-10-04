@@ -3,12 +3,13 @@ test('xml-to-json', () => {
     const json = xmlToJSON(`
         <template>
             <div id="box">
-                <button type="button">submit</button>
+                <button v-if="sd" type="button">submit</button>
+                <template v-else>22</template>
             </div>
         </template>
     `);
     const template = (json.children || []).find((item) => item.tag === 'template');
-    console.log(json);
+    console.log(JSON.stringify(json));
     console.log(`template=`, template);
     expect(template && template.tag === 'template').toBe(true);
 });

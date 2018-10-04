@@ -1,7 +1,6 @@
-import { IXmlJsonAttr, IXmlJsonAttrs, IXmlJsonElement, XmlJsonNodeType } from '@sunwalker/types';
+import { IXmlJsonAttr, IXmlJsonAttrMap, IXmlJsonElement, XmlJsonNodeType } from '@sunwalker/types';
 import each from '@sunwalker/utils/each';
 import has from '@sunwalker/utils/has';
-import { trim } from '@sunwalker/utils/trim';
 import { DefaultTreeDocumentFragment, DefaultTreeNode, DocumentFragment, parseFragment, serialize } from 'parse5';
 
 const convert = (parseResult: DocumentFragment | any): IXmlJsonElement => {
@@ -26,7 +25,8 @@ const convert = (parseResult: DocumentFragment | any): IXmlJsonElement => {
             res.node = XmlJsonNodeType.element;
             res.tag = parseResult.tagName.toLowerCase();
             if (parseResult.attrs && parseResult.attrs.length > 0) {
-                const attrs: IXmlJsonAttrs = {};
+                const attrMap:IXmlJsonAttrMap = {};
+                const attrs:IXmlJsonAttr[] = [];
                 // 判断某属性是否是仅仅写了属性名，如：checked
                 const onlyNameAttrs: string[] = [];
                 Object.keys(parseResult.sourceCodeLocation.attrs).forEach((name) => {
@@ -35,7 +35,7 @@ const convert = (parseResult: DocumentFragment | any): IXmlJsonElement => {
                         onlyNameAttrs.push(name);
                     }
                 });
-                each(parseResult.attrs, (item: { name: string; value: any }) => {
+                each<{ name: string; value: any }>(parseResult.attrs, (item) => {
                     const attr: IXmlJsonAttr = {
                         name: item.name,
                     };
@@ -44,9 +44,11 @@ const convert = (parseResult: DocumentFragment | any): IXmlJsonElement => {
                     } else {
                         attr.onlyName = true;
                     }
-                    attrs[item.name] = attr;
+                    attrMap[item.name] = attr;
+                    attrs.push(attr);
                 });
-                res.arrts = attrs;
+                res.attrMap = attrMap;
+                res.attrs = attrs;
             }
 
             // 标签是否是自闭合的
