@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "types": ["node"],
+        "types": ["node", "jest"],
         "lib": ["es5", "es6", "es7", "dom"],
         "target": "es5",
         "module": "commonjs",

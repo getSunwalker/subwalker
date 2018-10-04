@@ -538,6 +538,10 @@
   version "1.1.2"
   resolved "http://registry.npm.taobao.org/@nodelib/fs.stat/download/@nodelib/fs.stat-1.1.2.tgz#54c5a964462be3d4d78af631363c18d6fa91ac26"
 
+"@types/jest@^23.3.3":
+  version "23.3.3"
+  resolved "http://registry.npm.taobao.org/@types/jest/download/@types/jest-23.3.3.tgz#246ebcc52771d2327bb8e37aa971b412d9dc4237"
+
 "@types/node@^10.11.4":
   version "10.11.4"
   resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-10.11.4.tgz#e8bd933c3f78795d580ae41d86590bfc1f4f389d"

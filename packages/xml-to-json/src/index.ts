@@ -1,11 +1,12 @@
 import { IXmlJsonAttr, IXmlJsonAttrs, IXmlJsonElement, XmlJsonNodeType } from '@sunwalker/types';
 import each from '@sunwalker/utils/each';
 import has from '@sunwalker/utils/has';
-import { DefaultTreeDocumentFragment, DefaultTreeNode, DocumentFragment, parseFragment } from 'parse5';
+import { trim } from '@sunwalker/utils/trim';
+import { DefaultTreeDocumentFragment, DefaultTreeNode, DocumentFragment, parseFragment, serialize } from 'parse5';
 
 const convert = (parseResult: DocumentFragment | any): IXmlJsonElement => {
     const res: IXmlJsonElement = {
-        node: XmlJsonNodeType.element,
+        node: XmlJsonNodeType.root,
     };
     if (!parseResult) {
         return res;

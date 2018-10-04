@@ -1,12 +1,12 @@
 export enum XmlJsonNodeType {
     // 元素
-    element,
+    element = 'element',
     // 根节点
-    root,
+    root = 'root',
     // 文本
-    text,
+    text = 'text',
     // 注释
-    comment,
+    comment = 'comment',
 }
 export interface IXmlJsonAttr {
     // 属性名称
@@ -25,9 +25,9 @@ export interface IXmlJsonElement {
     tag?: string;
     // 属性
     arrts?: IXmlJsonAttrs;
-    // 子节点集合，可能为空
+    // 子节点集合
     children?: IXmlJsonElement[];
-    // 节点值，node=text|comment时方可能存在值
+    // 节点值，只有node=text|comment是才有值
     value?: string;
     // 自关闭标签，如：<br />
     selfClosing?: boolean;
