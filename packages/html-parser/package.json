@@ -1,11 +1,11 @@
 {
-    "name": "@sunwalker/vue-template-compiler",
+    "name": "@sunwalker/html-parser",
     "version": "0.0.1",
-    "description": "> TODO: description",
+    "description": "html-parser",
     "author": "imingyu <mingyuhisoft@163.com>",
     "homepage": "https://github.com/getSunwalker/sunwalker#readme",
     "license": "BSD-3-Clause",
-    "main": "lib/vue-template-compiler.js",
+    "main": "dist/index.js",
     "publishConfig": {
         "registry": "https://registry.npm.taobao.org"
     },
@@ -22,6 +22,9 @@
     },
     "dependencies": {
         "@sunwalker/utils": "^0.0.1",
-        "@sunwalker/xml-to-json": "^0.0.1"
+        "parse5": "^5.1.0"
+    },
+    "devDependencies": {
+        "@types/parse5": "^5.0.0"
     }
 }

@@ -1,6 +1,6 @@
 import each from '@sunwalker/utils/has';
-import { default as xmlToJSON, IXmlJsonElement, XmlJsonNodeType } from '@sunwalker/xml-to-json';
-export type ITemplateAST = IXmlJsonElement
+import { default as xmlToJSON, IXmlElement, XmlNodeType } from '@sunwalker/xml-to-json';
+export type ITemplateAST = IXmlElement
 export interface IStyleAST {}
 export interface IScriptST {}
 export interface IParseResult {
@@ -8,8 +8,8 @@ export interface IParseResult {
     template?: TemplateAST;
     style?: IStyleAST[];
     script?: IScriptST;
-    xmlJSON: IXmlJsonElement;
-    templateJSON?: IXmlJsonElement | any;
+    xmlJSON: IXmlElement;
+    templateJSON?: IXmlElement | any;
 }
 export default (vueContent: string): IParseResult => {
     const result: IParseResult = {
@@ -17,7 +17,7 @@ export default (vueContent: string): IParseResult => {
         xmlJSON: xmlToJSON(vueContent),
     };
     const templateJSON = result.xmlJSON.children
-        ? result.xmlJSON.children.find((item) => item.node === XmlJsonNodeType.element && item.tag === 'template')
+        ? result.xmlJSON.children.find((item) => item.node === XmlNodeType.element && item.tag === 'template')
         : null;
     result.templateJSON = templateJSON;
     return result;

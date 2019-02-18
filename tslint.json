@@ -1,16 +1,31 @@
 {
     "defaultSeverity": "error",
-    "extends": ["tslint:recommended"],
+    "extends": [
+        "tslint:recommended"
+    ],
     "jsRules": {},
     "rules": {
         "max-line-length": {
-            "options": [120]
+            "options": [
+                120
+            ]
         },
         "triple-equals": true,
         "semicolon": true,
-        "indent": [true, "spaces", 4],
-        "quotemark": [true, "single"],
+        "indent": [
+            true,
+            "spaces",
+            4
+        ],
+        "quotemark": [
+            true,
+            "single"
+        ],
         "no-console": false,
+        "interface-name": [
+            true,
+            "always-prefix"
+        ]
     },
     "rulesDirectory": []
 }

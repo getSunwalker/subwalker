@@ -5,5 +5,5 @@
     "git.ignoreLimitWarning": true,
     "prettier.tabWidth": 4,
     "prettier.tslintIntegration": true,
-    "typescript.tsdk": "node_modules/typescript/lib"
+    "typescript.updateImportsOnFileMove.enabled": "never"
 }
